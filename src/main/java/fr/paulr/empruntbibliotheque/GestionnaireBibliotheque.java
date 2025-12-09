@@ -17,7 +17,8 @@ public class GestionnaireBibliotheque {
     public void addItem(Object item) {
         items.add(item);
     }
-
+// ne respecte pas le principe Open/Closed car si on ajoute un nouveau type d'article,
+// il faut modifier cette méthode
     public void processItem(Object item, String type) {
         if ("livre".equalsIgnoreCase(type)) {
             Livre l = (Livre) item;

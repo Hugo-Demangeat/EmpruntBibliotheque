@@ -8,6 +8,8 @@ package fr.paulr.empruntbibliotheque;
  *
  * @author Utilisateur
  */
+// ne respecte pas le ISP car cette interface n'est pas spécialisée.
+/*
 public interface ArticleEmpruntable {
 
     void emprunter();
@@ -20,5 +22,26 @@ public interface ArticleEmpruntable {
 
     void connexionBDD();
 
+    void envoyerNotifEmail(String message);
+}
+*/
+
+// Respecte le ISP en divisant l'interface en plusieurs interfaces spécifiques.
+public interface EmprunterArticle {
+    void emprunter();
+}
+public interface RendreArticle {
+    void rendreArticle();
+}
+public interface CalculerPenalite {
+    void calculerPenaliteDeRetard(int jours);
+}
+public interface ImprimerEtiquette {
+    void imprimeEtiquette();
+}
+public interface ConnexionBDD {
+    void connexionBDD();
+}
+public interface EnvoyerNotifEmail {
     void envoyerNotifEmail(String message);
 }

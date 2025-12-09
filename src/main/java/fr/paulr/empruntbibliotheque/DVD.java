@@ -48,6 +48,7 @@ public class DVD implements ArticleEmpruntable{
 }
 
 // Classes concrètes (DIP violé)
+/*
 class MySqlDatabase {
     public void connect(String host, int port, String user, String pass) {
         System.out.println("Connexion MySQL à " + host + ":" + port);
@@ -59,3 +60,4 @@ class SmtpEmailSender {
         System.out.println("Email envoyé à " + to + ": " + subject);
     }
 }
+*/

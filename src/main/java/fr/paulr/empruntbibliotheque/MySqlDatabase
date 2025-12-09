@@ -1,0 +1,5 @@
+public class MySqlDatabase {
+    public void connect(String host, int port, String user, String pass) {
+        System.out.println("Connexion MySQL à " + host + ":" + port);
+    }
+}
